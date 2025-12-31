@@ -106,7 +106,7 @@ function HomeContent() {
       <div className="hero">
         <div className="hero-textbox">
           <p className="hero-textbox-label">NEW YEAR NEW HAIR</p>
-          <p className="hero-textbox-text">Start your natural beauty ritual today</p>
+          <p className="hero-textbox-text">Get free shipping on orders over $40</p>
           <p className="hero-textbox-subtext">Let zarsbars be a part of your daily hair care routine.</p>
           <button 
             className="hero-shop-button"

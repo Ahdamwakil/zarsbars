@@ -26,7 +26,7 @@ export const products = [
     shopifyId: 'YOUR_ALPHABET_BAR_PRODUCT_ID',
     title: 'Alphabet Bar',
     subtitle: 'Natural Shampoo Bar',
-    price: 25.00,
+    price: 32.00,
     image: '/images/Alphabet.png',
     hoverImage: '/images/DTS_my_own_summer_Daniel_Farò_Photos_ID9732.jpg',
     variantId: null, // Will be fetched from Shopify
@@ -37,7 +37,7 @@ export const products = [
     shopifyId: 'YOUR_BLUE_MAGIC_BAR_PRODUCT_ID',
     title: 'Blue Magic Bar',
     subtitle: 'Natural Shampoo Bar',
-    price: 25.00,
+    price: 32.00,
     image: '/images/bluemagic.png',
     hoverImage: '/images/DTS_OMW_Daniel_Farò_Photos_ID10435.jpg',
     variantId: null, // Will be fetched from Shopify
