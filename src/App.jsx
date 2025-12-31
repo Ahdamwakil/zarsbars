@@ -10,6 +10,7 @@ function AppContent() {
   const { setIsOpen, getCartItemCount } = useCart()
   const [productData, setProductData] = useState([])
   const [isLoadingProducts, setIsLoadingProducts] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Fetch product data from Shopify
   useEffect(() => {
@@ -60,7 +61,14 @@ function AppContent() {
         </div>
         <nav className="navbar">
           <div className="navbar-brand">zarsbars.</div>
-          <div className="navbar-menu">
+          <button 
+            className="navbar-mobile-menu-btn"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            menu
+          </button>
+          <div className={`navbar-menu ${isMobileMenuOpen ? 'navbar-menu-open' : ''}`}>
             <div className="navbar-dropdown">
               <button className="navbar-dropdown-btn">shampoo bars</button>
             </div>
