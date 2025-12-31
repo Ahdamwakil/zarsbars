@@ -61,7 +61,7 @@ function HomeContent() {
           <p>We aren't fake, we're natural</p>
         </div>
         <nav className="navbar">
-          <div className="navbar-brand">zarsbars.</div>
+          <div className="navbar-brand">zarsbars</div>
           <button 
             className="navbar-mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

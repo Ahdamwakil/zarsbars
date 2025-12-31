@@ -60,7 +60,7 @@ function ShopAll() {
           <p>We aren't fake, we're natural</p>
         </div>
         <nav className="navbar">
-          <div className="navbar-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>zarsbars.</div>
+          <div className="navbar-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>zarsbars</div>
           <button 
             className="navbar-mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
