@@ -135,6 +135,23 @@
     text-align: left;
     padding: 0.5rem 0;
   }
+
+  .hero {
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    padding-top: calc(2.5rem + 4rem);
+  }
+
+  .hero-textbox {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 2rem);
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .navbar-cart {
