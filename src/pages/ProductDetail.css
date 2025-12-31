@@ -1,0 +1,153 @@
+.product-detail {
+  min-height: 100vh;
+  padding-top: calc(2.5rem + 4rem);
+  padding: calc(2.5rem + 4rem) 2rem 4rem;
+}
+
+.product-detail-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(2.5rem + 4rem);
+  font-family: 'Graphik', sans-serif;
+}
+
+.product-detail-back {
+  font-family: 'Graphik', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-transform: lowercase;
+  transition: opacity 0.2s;
+}
+
+.product-detail-back:hover {
+  opacity: 0.6;
+}
+
+.product-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.product-detail-image-section {
+  width: 100%;
+}
+
+.product-detail-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f5f5f5;
+}
+
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.product-detail-title {
+  font-family: 'Graphik', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.product-detail-subtitle {
+  font-family: 'Graphik', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #666;
+  margin: 0;
+}
+
+.product-detail-price {
+  font-family: 'Graphik', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+.product-detail-description {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.product-detail-description p {
+  font-family: 'Graphik', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.product-detail-add-button {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 400px;
+  font-family: 'Graphik', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid white;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  text-transform: lowercase;
+  transition: border 0.2s;
+}
+
+.product-detail-add-button:hover:not(:disabled) {
+  border: 1px dashed #d3d3d3;
+}
+
+.product-detail-add-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    padding: calc(2.5rem + 4rem) 1rem 2rem;
+  }
+
+  .product-detail-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-detail-info {
+    padding-top: 0;
+  }
+
+  .product-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .product-detail-add-button {
+    max-width: 100%;
+  }
+}
+

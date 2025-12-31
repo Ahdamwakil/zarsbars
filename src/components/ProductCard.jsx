@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 
 function ProductCard({ product }) {
   const { addToCart, isLoading } = useCart()
   const [isHovering, setIsHovering] = useState(false)
+  const navigate = useNavigate()
 
   if (!product) return null
 
@@ -16,7 +18,8 @@ function ProductCard({ product }) {
   const staticPrice = product.price
   const price = shopifyPrice || (staticPrice ? { amount: staticPrice.toString(), currencyCode: 'USD' } : null)
 
-  const handleAddToCart = async () => {
+  const handleAddToCart = async (e) => {
+    e.stopPropagation() // Prevent navigation when clicking button
     if (variant && variant.availableForSale && variant.id) {
       try {
         await addToCart(variant.id, 1)
@@ -27,11 +30,23 @@ function ProductCard({ product }) {
     }
   }
 
+  const handleProductClick = () => {
+    // Only navigate if product is available (not sold out and has variant)
+    if (!product.soldOut && variant?.id) {
+      const productId = product.shopifyId || product.id?.split('/').pop()
+      navigate(`/product/${productId}`)
+    }
+  }
+
   const mainImageUrl = image ? image.url : null
   const hoverImageUrl = product.hoverImage || null
 
   return (
-    <div className="product-card">
+    <div 
+      className="product-card"
+      onClick={handleProductClick}
+      style={{ cursor: (!product.soldOut && variant?.id) ? 'pointer' : 'default' }}
+    >
       <div 
         className="product-image-wrapper"
         onMouseEnter={() => setIsHovering(true)}
@@ -66,9 +81,9 @@ function ProductCard({ product }) {
       <button 
         className="product-add-button" 
         onClick={handleAddToCart}
-        disabled={isLoading || !variant?.availableForSale || !variant?.id}
+        disabled={isLoading || !variant?.availableForSale || !variant?.id || product.soldOut}
       >
-        {isLoading ? 'adding...' : 'add to bag'}
+        {product.soldOut ? 'sold out' : (isLoading ? 'adding...' : 'add to bag')}
       </button>
     </div>
   )
