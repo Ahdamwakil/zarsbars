@@ -143,15 +143,6 @@
     padding-top: calc(2.5rem + 4rem);
   }
 
-  .hero-textbox {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: calc(100% - 2rem);
-    max-width: 400px;
-    margin: 0 auto;
-  }
 }
 
 .navbar-cart {
@@ -639,6 +630,24 @@
 
   .cart-drawer {
     max-width: 100%;
+  }
+
+  .hero {
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    padding-top: calc(2.5rem + 4rem);
+    background-position: center 20% !important;
+  }
+
+  .hero-textbox {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: calc(100% - 2rem) !important;
+    max-width: 400px !important;
+    margin: 2rem auto 0 !important;
   }
 }
 
