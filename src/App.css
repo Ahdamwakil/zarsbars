@@ -89,10 +89,12 @@
   padding: 0;
   text-decoration: none;
   transition: text-decoration 0.2s;
+  display: inline-block;
 }
 
-.navbar-dropdown-btn:hover {
-  text-decoration: underline;
+.navbar-dropdown-btn:hover,
+.navbar-dropdown-btn:focus {
+  text-decoration: underline !important;
   text-underline-offset: 0.3em;
 }
 

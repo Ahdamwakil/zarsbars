@@ -105,7 +105,15 @@ function ProductDetail() {
               </button>
             </div>
             <div className="navbar-dropdown">
-              <button className="navbar-dropdown-btn">merch</button>
+              <a 
+                href="https://punchup.live/zarthestar" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="navbar-dropdown-btn"
+                style={{ textDecoration: 'none' }}
+              >
+                zar the star
+              </a>
             </div>
           </div>
           <div 
